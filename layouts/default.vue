@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template lang="pug">
-div Layout: default
+.min-h-screen.flex.justify-center.items-center
   slot
 </template>
 
