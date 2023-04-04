@@ -10,14 +10,13 @@ const isChecked = ref(true);
 
 const switchTheme = () => {
     isChecked.value = !isChecked;
-    if (document.documentElement.classList.contains("dark")) {
-        document.documentElement.classList.remove('dark')
+    document.documentElement.classList.toggle("dark");
+    if(document.documentElement.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
     } else {
-        document.documentElement.classList.add('dark')
+        localStorage.setItem("theme", "light");
     }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped lang="scss"></style>
